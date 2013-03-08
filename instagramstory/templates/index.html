@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<title>InstagramStory</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Bootstrap -->
+<link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/static/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<div class="container">
+   <div class="row-fluid">
+      <div class="span4"><center><h1>1</h1></center></div>
+      <div class="span4"><center><h1 class="muted">2</h1></center></div>
+      <div class="span4"><center><h1 class="muted">3</h1></center></div>
+   </div>
+   <h1>Tell Your Story</h1>
+   <form action="/chooseImages/" method="post">
+   {% csrf_token %}
+   <textarea class="span12" rows="10" name="story"></textarea>
+   <div class="form-actions">
+      <div class="span10"> </div><button type="submit" class="btn-large btn-inverse">Next</button>
+   </div>
+   </form>
+</div>   
+</body>
+</html>
